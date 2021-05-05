@@ -1,0 +1,139 @@
+html {
+  height: 100%;
+}
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  min-height: 100%;
+  position: relative;
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+/*********  image  ***********/
+#descktop {
+  display: none;
+}
+#mobile {
+    width: 100%;
+}
+/**************** Grid container ******************/
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  text-align: center;
+}
+.logo {
+  align-self: flex-start;
+  margin: 30px;
+}
+.title {
+  text-transform: uppercase;
+  letter-spacing: 10pt;
+  margin-top: 30px;
+  color: hsl(0, 6%, 24%);
+}
+.title var {
+  font-style: normal;
+  font-weight: 300;
+  color: hsl(0, 36%, 70%);
+}
+.comment {
+  margin: 0 30px;
+  color: hsl(0, 36%, 70%);
+  line-height: 1.5;
+}
+.email-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+input[type="email"] {
+  background: transparent;
+  width: 250px;
+  border-radius: 20px;
+  border: 1px solid hsl(0, 36%, 70%);
+  outline-width: 0;
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+::-webkit-input-placeholder,
+input,
+select,
+textarea {
+  color: hsl(0, 36%, 70%);
+  font-size: 12px;
+}
+button {
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  width: 50px;
+  height: 35px;
+  border-radius: 20px;
+  position: relative;
+  left: -25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border: 0;
+}
+button:focus {
+  outline: 0;
+}
+.arrow-icon {
+  width: 8px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/************** footer ***************/
+.attribution {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+}
+/******************* descktop  *********************/
+@media (min-width: 600px) {
+  #mobile {
+    display: none;
+  }
+  .grid-container {
+    display: unset;
+    text-align: left;
+  }
+  #descktop {
+    display: unset;
+    float: right;
+    width: auto;
+    height: 100vh;
+  }
+  .logo {
+    margin: 5% 0;
+    padding-left: 10%;
+    float: left;
+    width: auto;
+  }
+  .title {
+    margin: 5% 0 0;
+    padding-left: 10%;
+    clear: left;
+  }
+  .comment {
+    margin: 2% 0;
+    padding-left: 10%;
+    width: 30%;
+    text-align: justify;
+  }
+  .email-section {
+    margin-left: 10%;
+    justify-content: left;
+    width: 40%;
+  }
+  .attribution {
+    width: 40%;
+    text-align: left;
+    padding-left: 10%;
+  }
+}
